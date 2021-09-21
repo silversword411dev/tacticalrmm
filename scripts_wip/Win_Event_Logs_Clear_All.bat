@@ -1,3 +1,5 @@
+rem This clears Event Logs
+
 @echo off 
 for /F %%a IN (?wevtutil el?) DO (wevtutil.exe cl %%a >nul 2>&1) 
 IF (%adminTest%)==(Access) goto noAdmin 
